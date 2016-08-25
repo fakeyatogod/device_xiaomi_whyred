@@ -387,6 +387,19 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     fstab.qcom
 
+# AOSP packages
+PRODUCT_PACKAGES += \
+    Launcher3 \
+    messaging \
+    SoundRecorder \
+    SpeechRecorder \
+    Terminal
+
+# AOSP properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.setupwizard.rotation_locked=true \
+    ro.storage_manager.enabled=true
+
 # RCS
 PRODUCT_PACKAGES += \
     rcs_service_aidl \
