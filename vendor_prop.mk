@@ -10,7 +10,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.vendor.shutdown.waittime=500 \
     ro.build.shutdown_timeout=0 \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp \
-    ro.opengles.version=196610
+    ro.opengles.version=196610 \
+    ro.vendor.iocgrp.config=1
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
