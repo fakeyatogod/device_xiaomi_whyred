@@ -1219,7 +1219,6 @@ product/lib/vendor.qti.hardware.perf@1.0.so|d04786a723d766b9d22c88e8aec5f8036d1a
 product/lib/vendor.qti.hardware.perf@2.0.so|0a08551185ac8626b832068ecb77997800050233
 product/lib64/vendor.qti.hardware.perf@1.0.so|9b411738cf2ca8319bacf1f859cc3679f576215a
 product/lib64/vendor.qti.hardware.perf@2.0.so|3131f461ecb897f68d02df0bf1027ca0a7d07c1d
-vendor/bin/energy-awareness|6515fada09432a437d2ed591ce141bb70fb10a9e
 vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|57b1e050c9300a72baff8a19872b5a32ae9122e9
 vendor/bin/msm_irqbalance|e917104fbd26c844d27ffb2b7ec4f665fdfb8b78
 vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc|cc8658db5e19f8e5e575fb986e7d38147e675f8d
