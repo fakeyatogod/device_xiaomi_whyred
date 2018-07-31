@@ -212,6 +212,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_ODM_PROPERTIES += \
     ro.vendor.qti.va_odm.support=1
 
+# MiuiCamera
+PRODUCT_PROPERTY_OVERRIDES += \
+    camera.shutter_sound.blacklist=com.android.camera
+
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.ims_volte_enable=1 \
