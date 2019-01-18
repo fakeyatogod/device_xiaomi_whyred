@@ -1,3 +1,11 @@
+# ART
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.dex2oat-filter=speed \
+    dalvik.vm.image-dex2oat-filter=speed \
+    ro.sys.fw.dex2oat_thread_count=8 \
+    dalvik.vm.boot-dex2oat-threads=8 \
+    dalvik.vm.dex2oat-threads=8
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.job_delay=true \
     persist.sys.mcd_config_file=/system/etc/mcd_default.conf \
