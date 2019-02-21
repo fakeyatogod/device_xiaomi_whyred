@@ -107,7 +107,26 @@ case "$target" in
                 ;;
         esac
         ;;
-
+     "sm6150")
+         case "$soc_hwplatform" in
+             "ADP")
+                 setprop vendor.display.lcd_density 160
+                 ;;
+         esac
+         case "$soc_hwid" in
+             365|366)
+                 sku_ver=`cat /sys/devices/platform/soc/aa00000.qcom,vidc1/sku_version` 2> /dev/null
+                 setprop vendor.media.target.version 1
+                 if [ $sku_ver -eq 1 ]; then
+                     setprop vendor.media.target.version 2
+                 fi
+                 ;;
+             355|369|377|384)
+                 setprop vendor.chre.enabled 0
+                 ;;
+             *)
+         esac
+         ;;
     "msm8660")
         case "$soc_hwplatform" in
             "Fluid")
@@ -237,6 +256,11 @@ case "$target" in
         case "$soc_hwid" in
             294|295|296|297|298|313|353|354|363|364)
                 setprop vendor.opengles.version 196610
+                if [ $soc_hwid = 354 ]
+                then
+                    setprop vendor.media.target.version 1
+                    log -t BOOT -p i "SDM429 early_boot prop set for: HwID '$soc_hwid'"
+                fi
                 ;;
             303|307|308|309|320)
                 # Vulkan is not supported for 8917 variants
@@ -293,7 +317,7 @@ case "$target" in
             *)
                 sku_ver=`cat /sys/devices/platform/soc/aa00000.qcom,vidc1/sku_version` 2> /dev/null
                 if [ $sku_ver -eq 1 ]; then
-                    setprop vendor.media.sdm710.version 1
+                    setprop vendor.media.target.version 1
                 fi
                 ;;
         esac
@@ -307,7 +331,7 @@ case "$target" in
                 fi
 
                 if [ $cap_ver -eq 1 ]; then
-                    setprop vendor.media.msm8953.version 1
+                    setprop vendor.media.target.version 1
                 fi
                 ;;
     #Set property to differentiate SDM660 & SDM455
@@ -315,7 +339,7 @@ case "$target" in
     "sdm660")
         case "$soc_hwid" in
            385)
-               setprop vendor.media.sdm660.version 1
+               setprop vendor.media.target.version 1
         esac
         ;;
 esac
