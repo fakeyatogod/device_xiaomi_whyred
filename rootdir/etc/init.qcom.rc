@@ -341,10 +341,6 @@ on post-fs-data
     mkdir /data/vendor/netmgr 0770 radio radio
     chmod 0770 /data/vendor/netmgr
 
-    #create ipacm log dir
-    mkdir /data/vendor/ipa 0770 radio radio
-    chmod 0770 /data/vendor/ipa
-
     # Create the directories used by WiGig Sensing
     mkdir /data/vendor/sensing 0770 system wifi
 
@@ -552,13 +548,6 @@ service vendor.port-bridge /system/vendor/bin/port-bridge
 
 service vendor.netmgrd /system/vendor/bin/netmgrd
     class main
-    disabled
-    writepid /dev/cpuset/system-background/tasks
-
-service vendor.ipacm /system/vendor/bin/ipacm
-    class main
-    user radio
-    group radio inet
     disabled
     writepid /dev/cpuset/system-background/tasks
 
