@@ -683,11 +683,6 @@ on property:init.svc.surfaceflinger=restarting
 on property:vendor.display.lcd_density=*
     setprop ro.sf.lcd_density ${vendor.display.lcd_density}
 
-service time_daemon /system/vendor/bin/time_daemon
-    class main
-    user root
-    group root
-
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
     group system
