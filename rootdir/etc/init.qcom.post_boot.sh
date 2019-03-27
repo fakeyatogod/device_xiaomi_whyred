@@ -3748,6 +3748,12 @@ case "$target" in
 	    do
 		echo 4000 > $l3gold/mem_latency/ratio_ceil
 	    done
+
+	    #Prime L3 ratio ceil
+	    for l3prime in $device/*cpu7-cpu-l3-lat/devfreq/*cpu7-cpu-l3-lat
+	    do
+		echo 20000 > $l3prime/mem_latency/ratio_ceil
+	    done
 	done
 
     if [ -f /sys/devices/soc0/hw_platform ]; then
@@ -3895,6 +3901,12 @@ case "$target" in
 		echo "mem_latency" > $memlat/governor
 		echo 10 > $memlat/polling_interval
 		echo 400 > $memlat/mem_latency/ratio_ceil
+	    done
+
+	    #Enable powersave governor for L3 cdsp nodes
+	    for l3cdsp in $device/*qcom,devfreq-l3/*cdsp-l3-lat/devfreq/*cdsp-l3-lat
+	    do
+                echo "powersave" > $l3cdsp/governor
 	    done
 
 	    #Enable mem_latency governor for LLCC and DDR scaling
@@ -4221,7 +4233,7 @@ case "$target" in
         start mpdecision
         echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
     ;;
-    "msm8909" | "msm8916" | "msm8937" | "msm8952" | "msm8953" | "msm8994" | "msm8992" | "msm8996" | "msm8998" | "sdm660" | "apq8098_latv" | "sdm845" | "sdm710" | "msmnile" | "msmsteppe")
+    "msm8909" | "msm8916" | "msm8937" | "msm8952" | "msm8953" | "msm8994" | "msm8992" | "msm8996" | "msm8998" | "sdm660" | "apq8098_latv" | "sdm845" | "sdm710" | "msmnile" | "msmsteppe" | "kona")
         setprop vendor.post_boot.parsed 1
     ;;
     "apq8084")
