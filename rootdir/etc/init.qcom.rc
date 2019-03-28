@@ -602,6 +602,7 @@ service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
     writepid /dev/cpuset/system-background/tasks
 
 on property:sys.shutdown.requested=*
+    write /sys/kernel/shutdown_wlan/shutdown 1
     stop cnss-daemon
 
 service loc_launcher /system/vendor/bin/loc_launcher
