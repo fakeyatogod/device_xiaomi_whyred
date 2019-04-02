@@ -14,5 +14,11 @@
     "revision": "cr-8.0",
     "repository": "CarbonROM/android_kernel_xiaomi_whyred",
     "target_path": "kernel/xiaomi/whyred"
+  },
+  {
+    "remote": "gh",
+    "revision": "ten",   
+    "repository": "fakeyatogod/vendor_dirac",
+    "target_path": "vendor/dirac"
   }
 ]
