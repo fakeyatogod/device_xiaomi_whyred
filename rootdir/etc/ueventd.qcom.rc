@@ -173,6 +173,10 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/class/leds/blue     delay_off    0640    system    system
 /sys/class/leds/blue     breath       0640    system    system
 
+#qg
+/dev/qg                   0660  system     system
+/dev/qg_battery           0660  system     system
+
 # wlan
 /dev/wcnss_wlan           0660   system     system
 /dev/wcnss_ctrl           0660   system     system
