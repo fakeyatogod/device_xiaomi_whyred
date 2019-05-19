@@ -38,6 +38,7 @@ QCOM_BOARD_PLATFORMS += msmnile_au
 QCOM_BOARD_PLATFORMS += qcs605
 QCOM_BOARD_PLATFORMS += $(MSMSTEPPE)
 QCOM_BOARD_PLATFORMS += kona
+QCOM_BOARD_PLATFORMS += lito
 
 QSD8K_BOARD_PLATFORMS := qsd8k
 
@@ -51,11 +52,6 @@ BOARD_HAVE_QCOM_FM ?= true
 ifeq ($(strip $(TARGET_USES_NQ_NFC)),true)
 PRODUCT_BOOT_JARS += com.nxp.nfc.nq
 endif
-ifeq ($(strip $(BOARD_HAVE_QCOM_FM)),true)
-ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
-PRODUCT_BOOT_JARS += qcom.fmradio
-endif
-endif #BOARD_HAVE_QCOM_FM
 #Camera QC extends API
 #ifeq ($(strip $(TARGET_USES_QTIC_EXTENSION)),true)
 #PRODUCT_BOOT_JARS += com.qualcomm.qti.camera
@@ -158,6 +154,7 @@ AUDIO_HARDWARE += audio.primary.qcs605
 AUDIO_HARDWARE += audio.primary.msmnile
 AUDIO_HARDWARE += audio.primary.$(MSMSTEPPE)
 AUDIO_HARDWARE += audio.primary.kona
+AUDIO_HARDWARE += audio.primary.lito
 #
 AUDIO_POLICY := audio_policy.mpq8064
 AUDIO_POLICY += audio_policy.apq8084
@@ -816,8 +813,8 @@ WPA += hs20-osu-client
 
 #ZLIB
 ZLIB := gzip
-ZLIB += minigzip
 ZLIB += libunz
+ZLIB_HOST += minigzip
 
 #Charger
 CHARGER := charger
@@ -1027,6 +1024,7 @@ PRODUCT_PACKAGES += $(QRGND)
 PRODUCT_PACKAGES += $(UPDATER)
 PRODUCT_PACKAGES += $(WPA)
 PRODUCT_PACKAGES += $(ZLIB)
+PRODUCT_HOST_PACKAGES += $(ZLIB_HOST)
 PRODUCT_PACKAGES += $(VT_JNI)
 PRODUCT_PACKAGES += $(VT_QTI_PERMISSIONS)
 PRODUCT_PACKAGES += $(IMS_SETTINGS)
@@ -1252,6 +1250,17 @@ else
     PRODUCT_PROPERTY_OVERRIDES += \
         persist.vendor.qcomsysd.enabled=1
 endif
+
+PRODUCT_PACKAGES_DEBUG += \
+    init.qcom.debug.sh \
+    init.qcom.debug-sdm660.sh \
+    init.qcom.debug-sdm710.sh \
+    init.qti.debug-msmnile-apps.sh \
+    init.qti.debug-msmnile-modem.sh \
+    init.qti.debug-msmnile-slpi.sh \
+    init.qti.debug-talos.sh \
+    init.qti.debug-msmnile.sh \
+    init.qti.debug-kona.sh
 
 PRODUCT_PACKAGES += liboemaids_system
 PRODUCT_PACKAGES += liboemaids_vendor
