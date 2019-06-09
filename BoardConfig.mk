@@ -175,6 +175,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 TARGET_HAS_NO_WLAN_STATS := true
+TARGET_HAS_NO_POWER_STATS := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/recovery.fstab
