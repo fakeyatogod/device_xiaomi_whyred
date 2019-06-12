@@ -557,10 +557,9 @@ service vendor.ipacm /system/vendor/bin/ipacm
     writepid /dev/cpuset/system-background/tasks
 
 service vendor.sensors /vendor/bin/sscrpcd sensorspd
-    class core
+    class early_hal
     user system
     group system
-    disabled
 
 service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
