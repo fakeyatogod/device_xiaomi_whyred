@@ -1161,6 +1161,14 @@ config_kona_dcc_sys_agnoc()
     #CNOC End
 
 }
+# Function to send ASYNC package in TPDA
+kona_dcc_async_package()
+{
+    echo 0x06004FB0 0xc5acce55 > $DCC_PATH/config_write
+    echo 0x0600408c 0xff > $DCC_PATH/config_write
+    echo 0x06004FB0 0x0 > $DCC_PATH/config_write
+}
+
 # Function kona DCC configuration
 enable_kona_dcc_config()
 {
@@ -1199,6 +1207,7 @@ enable_kona_dcc_config()
     echo 4 > $DCC_PATH/curr_list
     echo cap > $DCC_PATH/func_type
     echo atb > $DCC_PATH/data_sink
+    kona_dcc_async_package
     config_kona_dcc_lpm
     config_kona_dcc_sys_agnoc_error
 
@@ -1223,9 +1232,10 @@ enable_kona_core_hang_config()
     echo 0xffffffff > $CORE_PATH_SILVER/threshold
     echo 0xffffffff > $CORE_PATH_GOLD/threshold
 
-    #To the enable core hang detection
-    echo 0x1 > $CORE_PATH_SILVER/enable
-    echo 0x1 > $CORE_PATH_GOLD/enable
+    #To the enable core hang detection.
+    #It's a boolean variable. DO NOT USE HEX values to enable/disable.
+    echo 1 > $CORE_PATH_SILVER/enable
+    echo 1 > $CORE_PATH_GOLD/enable
 }
 
 ftrace_disable=`getprop persist.debug.ftrace_events_disable`
