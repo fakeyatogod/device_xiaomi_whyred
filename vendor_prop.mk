@@ -3,6 +3,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.mcd_config_file=/system/etc/mcd_default.conf \
     drm.service.enabled=true \
     vendor.video.disable.ubwc=1 \
+    debug.sdm.support_writeback=0 \
     persist.vendor.qcomsysd.enabled=1 \
     ro.vendor.extension_library=libqti-perfd-client.so \
     sys.vendor.shutdown.waittime=500 \
@@ -190,4 +191,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.iwlan_operation_mode=legacy
-
