@@ -443,7 +443,7 @@ function configure_memory_parameters() {
 ProductName=`getprop ro.product.name`
 low_ram=`getprop ro.config.low_ram`
 
-if [ "$ProductName" == "msmnile" ]; then
+if [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] ; then
       # Enable ZRAM
       configure_zram_parameters
       configure_read_ahead_kb_values
@@ -3362,40 +3362,45 @@ case "$target" in
     echo 100 > /proc/sys/kernel/sched_group_upmigrate
     echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
+    # disable unfiltering
+    echo 0 > /proc/sys/kernel/sched_task_unfilter_nr_windows
+
     # configure governor settings for silver cluster
     echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
     echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
     echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
-    echo 122880 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
+    echo 1228800 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
     echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
     echo 576000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+    echo 650000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/rtg_boost_freq
 
     # configure governor settings for gold cluster
     echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy6/scaling_governor
     echo 0 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/up_rate_limit_us
     echo 0 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/down_rate_limit_us
-    echo 122880 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/hispeed_freq
+    echo 1228800 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/hispeed_freq
     echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
     echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
     echo 0 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/pl
     echo 672000 > /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/rtg_boost_freq
 
     # configure governor settings for gold+ cluster
     echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
     echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
     echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us
-    echo 122880 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
-    echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
+    echo 1228800 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
+    echo 85 > /sys/devices/system/cpu/cpu7/cpufreq/schedutil/hispeed_load
     echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
     echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
     echo 672000 > /sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/rtg_boost_freq
 
     # colocation v3 settings
-    echo 650000 > /proc/sys/kernel/sched_little_cluster_coloc_fmin_khz
     echo 51 > /proc/sys/kernel/sched_min_task_util_for_boost
     echo 51 > /proc/sys/kernel/sched_min_task_util_for_colocation
 
-    echo "0:122880" > /sys/module/cpu_boost/parameters/input_boost_freq
+    echo "0:1228800" > /sys/module/cpu_boost/parameters/input_boost_freq
     echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 
     # Set Memory parameters
@@ -4566,6 +4571,7 @@ case "$target" in
 	    done
 	done
     echo N > /sys/module/lpm_levels/parameters/sleep_disabled
+    configure_memory_parameters
     ;;
 esac
 
