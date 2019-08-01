@@ -22,9 +22,9 @@ persist.vendor.dpm.feature=1
 persist.vendor.dpm.nsrm.bkg.evt=3955
 
 #
-# Set network mode to (T/L/G/W/1X/EVDO, T/G/W/L) for 7+5 mode device on DSDS mode
+# Set network mode to (T/L/G/W/1X/EVDO, T/L/G/W/1X/EVDO) for 7+7 mode device on DSDS mode
 #
-ro.telephony.default_network=22,20
+ro.telephony.default_network=22,22
 
 debug.sf.enable_hwc_vds=1
 debug.sf.hw=1
