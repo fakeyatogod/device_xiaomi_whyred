@@ -459,6 +459,7 @@ PRODUCT_PACKAGES += \
     libdng_sdk.vendor_32 \
     libstdc++.vendor \
     vndk-ext \
+    libgui_vendor \
     vndk_package
 
 # Wifi
