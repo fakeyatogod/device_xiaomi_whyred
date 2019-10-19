@@ -1334,10 +1334,8 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 
 # Thermal
-vendor/etc/thermal-engine-map.conf
-vendor/etc/thermal-engine-normal.conf
-vendor/etc/thermal-engine-sgame.conf
-vendor/bin/thermal-engine
+vendor/etc/thermal-engine.conf|bfa54b9a52e2e378178bf33ccca6d14eb5170f72
+vendor/bin/thermal-engine|02f05e9522a611458af751163f5b28705fe372df
 vendor/lib/libthermalfeature.so
 -vendor/lib/libthermalclient.so
 vendor/lib64/libthermalfeature.so
