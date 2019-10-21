@@ -65,12 +65,11 @@ enable_atoll_tracing_events()
     # power
     echo 1 > /sys/kernel/debug/tracing/events/msm_low_power/enable
     #thermal
-    echo 1 > /sys/kernel/debug/tracing/events/thermal/thermal_pre_core_offline/enable
-    echo 1 > /sys/kernel/debug/tracing/events/thermal/thermal_post_core_offline/enable
-    echo 1 > /sys/kernel/debug/tracing/events/thermal/thermal_pre_core_online/enable
-    echo 1 > /sys/kernel/debug/tracing/events/thermal/thermal_post_core_online/enable
-    echo 1 > /sys/kernel/debug/tracing/events/thermal/thermal_pre_frequency_mit/enable
-    echo 1 > /sys/kernel/debug/tracing/events/thermal/thermal_post_frequency_mit/enable
+    echo 1 > /sys/kernel/debug/tracing/events/thermal/thermal_zone_trip/enable
+    echo 1 > /sys/kernel/debug/tracing/events/thermal/thermal_temperature/enable
+    echo 1 > /sys/kernel/debug/tracing/events/thermal/thermal_set_trip/enable
+    echo 1 > /sys/kernel/debug/tracing/events/thermal/cdev_update_start/enable
+    echo 1 > /sys/kernel/debug/tracing/events/thermal/cdev_update/enable
 
     #rmph_send_msg
     echo 1 > /sys/kernel/debug/tracing/events/rpmh/rpmh_send_msg/enable
@@ -254,10 +253,10 @@ config_atoll_dcc_noc_err_regs()
     echo 0x1700308 > $DCC_PATH/config
     echo 0x170030C > $DCC_PATH/config
     echo 0x1700310 > $DCC_PATH/config
-    echo 0x1700500 > $DCC_PATH/config
-    echo 0x1700504 > $DCC_PATH/config
-    echo 0x1700508 > $DCC_PATH/config
-    echo 0x170050C > $DCC_PATH/config
+    # echo 0x1700500 > $DCC_PATH/config
+    # echo 0x1700504 > $DCC_PATH/config
+    # echo 0x1700508 > $DCC_PATH/config
+    # echo 0x170050C > $DCC_PATH/config
     echo 0x1700900 > $DCC_PATH/config
     echo 0x1700904 > $DCC_PATH/config
     echo 0x1700908 > $DCC_PATH/config
@@ -359,9 +358,9 @@ config_atoll_dcc_noc_err_regs()
     #SNOC_WEST_NIU_STATUS_SBM_SENSEIN
     echo 0x1620B00 2 > $DCC_PATH/config
     #A1NOC_MONAQ_SBM_SENSEIN
-    echo 0x1700B00 2 > $DCC_PATH/config
+    # echo 0x1700B00 2 > $DCC_PATH/config
     #A1NOC_WEST_SBM_SENSEIN
-    echo 0x1700700 3 > $DCC_PATH/config
+    # echo 0x1700700 3 > $DCC_PATH/config
     #CNOC_CENTER_STATUS_SBM_SENSEIN
     # echo 0x1500500 7 > $DCC_PATH/config
     #CNOC_MMNOC_STATUS_SBM_SENSEIN
