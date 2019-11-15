@@ -74,6 +74,9 @@ vendor/lib/libdrc.so
 vendor/lib/libqtigef.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcvirt.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
 vendor/lib64/libacdbrtac.so
@@ -83,6 +86,8 @@ vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioparsers.so
 vendor/lib64/libqtigef.so
 vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libqcbassboost.so
+vendor/lib64/soundfx/libqcvirt.so
 
 # Audio ACDB
 vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
@@ -754,7 +759,7 @@ product/framework/vendor.qti.hardware.data.cne.internal.constants-V1.0-java.jar|
 product/framework/vendor.qti.hardware.data.connection-V1.0-java.jar|77ceef7ecd005acc2ba2647f7412e848e1f9679a
 product/framework/vendor.qti.hardware.data.connection-V1.1-java.jar|44ee5bebdd64a6cac4f9bab8cb4e6e271eb51388
 product/framework/vendor.qti.hardware.data.dynamicdds-V1.0-java.jar|4f33757198910a54b16a71ade73a366ec002aa1f
-product/framework/vendor.qti.data.factory-V2.0-java.jar
+product/framework/vendor.qti.data.factory-V2.0-java.jar|ccf0e3cf2e0db52819c434319c9cf9da73f94d80
 product/framework/vendor.qti.hardware.data.iwlan-V1.0-java.jar|5c307c53643e1ea63215ded8436eed31e418a37f
 product/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar|4fc57eb5dc38f9c7b7f33de84bb737b8e8e676eb
 -product/lib64/com.quicinc.cne.api@1.0.so|5fa41e820df349fbe105ac9a39da89f2eb273238
@@ -814,9 +819,9 @@ vendor/lib64/vendor.qti.hardware.data.connection@1.0.so|3e214f5a384d19378c63ebb3
 vendor/lib64/vendor.qti.hardware.data.connection@1.1.so|220a97b5dce6697f8a56ccd61f1e7ce37180fb51
 vendor/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so|8e098c8e8462a386f837880ad173ea848780581f
 vendor/lib64/vendor.qti.hardware.data.iwlan@1.0.so|b92905886998cdf8e71a5edd0958f9b26118d914
-vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|9868d96d363acb9fdfd8cafd2070fddb281e15f0
+vendor/lib64/vendor.qti.hardware.data.latency@1.0.so|24636675745b9aacd169c0f52ad93e2f0b561d8b
 vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|52600ab00087c5ee2be399cdcca9b797534ef6c0
-vendor/lib64/vendor.qti.latency@2.0.so|531cfa663cacf0aee1daaeb3bb8e935cd561cb19
+vendor/lib64/vendor.qti.latency@2.0.so|822fd0fa2df25d0f451fb3e33bd5a37892b7d6cf
 
 # Consumerir
 vendor/lib/hw/consumerir.default.so:vendor/lib/hw/consumerir.sdm660.so
