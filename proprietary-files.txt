@@ -1333,11 +1333,11 @@ vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 
-# Thermal configs
-vendor/etc/thermal-engine.conf
-vendor/etc/thermal-engine-map.conf
-vendor/etc/thermal-engine-normal.conf
-vendor/etc/thermal-engine-sgame.conf
+# Thermal configs - from jasmine-user 9 PKQ1.180904.001 V10.0.16.0.PDIMIXM release-keys
+vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
+vendor/etc/thermal-engine-map.conf|474264ed357e02b7bb8b757024275a4cb8ff2929
+vendor/etc/thermal-engine-normal.conf|c7622e7d466b86266eab95d04eff3150f6946980
+vendor/etc/thermal-engine-video.conf|0a40b2cbdf4e744f09cc9f59d6f72590e62e6550
 
 # Thermal - from LA.UM.8.2.r1-04000-sdm660.0
 vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
