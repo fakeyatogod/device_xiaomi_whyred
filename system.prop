@@ -144,28 +144,9 @@ persist.debug.coresight.config=stm-events
 ##property to choose between virtual/external wfd display
 persist.sys.wfd.virtual=0
 
-# system prop for NFC DT
-ro.nfc.port=I2C
-
-#property for vendor specific library
-ro.vendor.at_library=libqti-at.so
-
 #min/max cpu in core control
 ro.vendor.qti.core_ctl_min_cpu=2
 ro.vendor.qti.core_ctl_max_cpu=4
-
-#hwui properties
-ro.hwui.texture_cache_size=72
-ro.hwui.layer_cache_size=48
-ro.hwui.r_buffer_cache_size=8
-ro.hwui.path_cache_size=32
-ro.hwui.gradient_cache_size=1
-ro.hwui.drop_shadow_cache_size=6
-ro.hwui.texture_cache_flushrate=0.4
-ro.hwui.text_small_cache_width=1024
-ro.hwui.text_small_cache_height=1024
-ro.hwui.text_large_cache_width=2048
-ro.hwui.text_large_cache_height=2048
 
 #Bringup properties
 persist.vendor.radio.atfwd.start=true
@@ -173,12 +154,6 @@ persist.vendor.radio.atfwd.start=true
 #property to enable VDS WFD solution
 persist.hwc.enable_vds=1
 
-#Increase cached app limit
-ro.vendor.qti.sys.fw.bg_apps_limit=60
-
-#Settings to enable sensors
-#Device Orientation sensor
-ro.vendor.sensors.dev_ori=true
 #Persistent Motion Detector
 ro.vendor.sensors.pmd=true
 #Stationary Detector
@@ -191,9 +166,6 @@ ro.vendor.sensors.pug=true
 #Expose aux camera for below packages
 camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi,com.longcheertel.cit
-
-#back and fornt camera use different face detect parameters
-
 
 #disable UBWC for camera
 persist.vendor.camera.preview.ubwc=0
@@ -260,5 +232,3 @@ persist.vendor.radio.data_con_rprt=1
 #lct liuxuan add the dom ignore time
 persist.vendor.radio.ignore_dom_time=15
 
-# Maintainer
-ro.mk.maintainer=guaiyihu
