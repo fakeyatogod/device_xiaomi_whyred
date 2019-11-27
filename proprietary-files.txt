@@ -1212,6 +1212,7 @@ vendor/etc/init/port-bridge.rc|e52d61a0de5e8a3b21bfbfca929e862422645377
 -app/datastatusnotification/datastatusnotification.apk|ceafcce87298531a3adb13a87709a1fd65291625
 -app/embms/embms.apk|b9999b9cd6869a424b156183d52cd70830fa509f
 -app/QtiTelephonyService/QtiTelephonyService.apk|420b39e20a5166940c1e2e55e8d9c92ec910cebb
+vendor/bin/adpl|d955a01fcf6e5178b180851faf3df1c92a8965ed
 vendor/bin/ATFWD-daemon|8ba7661bdf0fdbd37fcd050a33d7c5557dae436b
 vendor/bin/netmgrd|8217e24b2322f1f1a717011770b8b74afbf20d29
 vendor/bin/port-bridge|e10ab85fc14e2f72817945d481a971894baebbad
