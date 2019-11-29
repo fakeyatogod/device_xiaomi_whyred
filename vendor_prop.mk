@@ -23,7 +23,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=cherokee \
     af.fast_track_multiplier=1 \
     vendor.audio_hal.period_size=192 \
-    ro.vendor.audio.sdk.fluencetype=none \
+    ro.vendor.audio.sdk.fluencetype=fluence \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=false \
     persist.vendor.audio.fluence.speaker=true \
@@ -66,8 +66,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #add dynamic feature flags here
 PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.feature.a2dp_offload.enable=false \
     vendor.audio.feature.afe_proxy.enable=true \
     vendor.audio.feature.anc_headset.enable=true \
+    vendor.audio.feature.audio_sphere.enable=true \
     vendor.audio.feature.battery_listener.enable=false \
     vendor.audio.feature.compr_cap.enable=false \
     vendor.audio.feature.compress_in.enable=false \
@@ -87,7 +89,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.hdmi_edid.enable=true \
     vendor.audio.feature.hdmi_passthrough.enable=true \
     vendor.audio.feature.hfp.enable=true \
-    vendor.audio.feature.hifi_audio.enable=true \
+    vendor.audio.feature.hifi_audio.enable=false \
     vendor.audio.feature.hwdep_cal.enable=false \
     vendor.audio.feature.incall_music.enable=false \
     vendor.audio.feature.multi_voice_session.enable=true \
@@ -126,8 +128,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio_hal.in_period_size=144 \
-    vendor.audio_hal.period_multiplier=3 \
-    vendor.audio.adm.buffering.ms=6
+    vendor.audio_hal.period_multiplier=2 \
+    vendor.audio.adm.buffering.ms=3
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.hw.binder.size_kbyte=1024
