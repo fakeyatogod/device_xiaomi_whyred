@@ -1199,6 +1199,9 @@ vendor/lib64/libqmiservices.so|5ecf57390ab66b8ebbcd1dbd3869422b5924a9ad
 vendor/lib/libqmi_cci.so|c9875888360b5498af4c067464c7956bd140c8bb
 vendor/lib64/libqmi_cci.so|93902ee01db0ba6ad9c26287fd1aba0f37b134bf
 
+# Radio - from mata - QP1A.190711.122
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|956a4017d0ba7f68e6d225e57b40d3b2bcbb4837
+
 # Radio - from jasmine_sprout 9 PKQ1.180904.001 V10.0.17.0.PDIMIXM release-keys
 -app/datastatusnotification/datastatusnotification.apk|ceafcce87298531a3adb13a87709a1fd65291625
 -app/embms/embms.apk|b9999b9cd6869a424b156183d52cd70830fa509f
@@ -1219,7 +1222,6 @@ framework/embmslibrary.jar|180d4d6b65d989023364457eb1bf6e1d45f7e274
 framework/qcrilhook.jar|740a14d3dc32b1becba45108df5e0a6467243fad
 framework/qti-telephony-common.jar|e529711775c31da38c9ecd1ab94b27ee15570dc4
 framework/QtiTelephonyServicelibrary.jar|6a39cc22511db7fd20546a293ebbe4e17edc1088
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|956a4017d0ba7f68e6d225e57b40d3b2bcbb4837
 vendor/bin/qti|26402d8a555fcd68bb1db45489789437076e9e77
 vendor/lib/libmdmdetect.so|de60f714ea108fcebf77b893d8565a192e9b80ad
 vendor/lib64/libconfigdb.so|a57474864e03c97ee0192e56311e95d0ba864b3f
