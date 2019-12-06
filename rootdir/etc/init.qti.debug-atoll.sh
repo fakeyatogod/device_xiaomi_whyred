@@ -31,11 +31,11 @@ enable_atoll_tracing_events()
     # timer
     echo 1 > /sys/kernel/debug/tracing/events/timer/timer_expire_entry/enable
     echo 1 > /sys/kernel/debug/tracing/events/timer/timer_expire_exit/enable
-    echo 1 > /sys/kernel/debug/tracing/events/timer/hrtimer_cancel/enable
+    #echo 1 > /sys/kernel/debug/tracing/events/timer/hrtimer_cancel/enable
     echo 1 > /sys/kernel/debug/tracing/events/timer/hrtimer_expire_entry/enable
     echo 1 > /sys/kernel/debug/tracing/events/timer/hrtimer_expire_exit/enable
-    echo 1 > /sys/kernel/debug/tracing/events/timer/hrtimer_init/enable
-    echo 1 > /sys/kernel/debug/tracing/events/timer/hrtimer_start/enable
+    #echo 1 > /sys/kernel/debug/tracing/events/timer/hrtimer_init/enable
+    #echo 1 > /sys/kernel/debug/tracing/events/timer/hrtimer_start/enable
     #enble FTRACE for softirq events
     echo 1 > /sys/kernel/debug/tracing/events/irq/enable
     #enble FTRACE for Workqueue events
@@ -63,7 +63,8 @@ enable_atoll_tracing_events()
     # regulator
     echo 1 > /sys/kernel/debug/tracing/events/regulator/enable
     # power
-    echo 1 > /sys/kernel/debug/tracing/events/msm_low_power/enable
+    echo 1 > /sys/kernel/debug/tracing/events/msm_low_power/cpu_idle_enter/enable
+    echo 1 > /sys/kernel/debug/tracing/events/msm_low_power/cpu_idle_exit/enable
     #thermal
     echo 1 > /sys/kernel/debug/tracing/events/thermal/thermal_zone_trip/enable
     echo 1 > /sys/kernel/debug/tracing/events/thermal/thermal_temperature/enable
@@ -375,6 +376,24 @@ config_atoll_dcc_noc_err_regs()
     echo 0x63041D00 > $DCC_PATH/config
     #NPU_SB_SENSEIN
     echo 0x9991500 8 > $DCC_PATH/config
+    #GEMNOC_HM_GEM_NOC_SBM_SAFE_SHAPING_SENSEIN
+    echo 0x96B8100  > $DCC_PATH/config
+    #AGGRE_NOC_CDSP_NOC_SENSEIN
+    echo 0x1700500 4 > $DCC_PATH/config
+    #VAPSS_SB_SENSEIN
+    echo 0x82D1500 5 > $DCC_PATH/config
+    #GCC_CDSP_NOC_TBU_GDS_HW_CTRL_IRQ_STATUS
+    echo 0x145384 > $DCC_PATH/config
+    #GCC_TURING_TBU_CBCR
+    echo 0x145000 > $DCC_PATH/config
+    #GCC_SYS_NOC_SF_TCU_CBCR
+    echo 0x183004 > $DCC_PATH/config
+    #GCC_MMU_TCU_CBCR
+    echo 0x183008 > $DCC_PATH/config
+    #GCC_NPU_CFG_AHB_CBCR
+    echo 0x14D004 > $DCC_PATH/config
+    #GCC_AGGRE_NOC_AHB_CBCR
+    echo 0x182008 > $DCC_PATH/config
 }
 
 config_atoll_dcc_shrm()
@@ -1439,6 +1458,11 @@ config_atoll_dcc_core_hang(){
     echo 0x17C0003C 1 > $DCC_PATH/config
 }
 
+config_atoll_dcc_gic(){
+    echo 0x17A00104 29 > $DCC_PATH/config
+    echo 0x17A00204 29 > $DCC_PATH/config
+}
+
 config_atoll_dcc_async_package(){
     echo 0x06004FB0 0xc5acce55 > $DCC_PATH/config_write
     echo 0x0600408c 0xff > $DCC_PATH/config_write
@@ -1487,6 +1511,7 @@ enable_atoll_dcc_config()
     config_atoll_dcc_rscc_lpass
     config_atoll_dcc_rscc_modem
     config_atoll_dcc_rscc_cdsp
+    config_atoll_dcc_gic
     #config_atoll_dcc_axi_pc
     #config_atoll_dcc_apb_pc
     #config_atoll_dcc_pdc_display
