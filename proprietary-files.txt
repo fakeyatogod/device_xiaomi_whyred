@@ -1063,14 +1063,14 @@ vendor/lib/hw/keystore.sdm660.so|990bc5ca05914f3df85320a31b26fae325e174e3
 vendor/lib64/hw/keystore.sdm660.so|ffd01591bd8a864cb2dbc6fd2c01fbd36ae54051
 
 # Listen - from jasmine_sprout 9 PKQ1.180904.001 V10.0.17.0.PDIMIXM release-keys
-vendor/lib/hw/sound_trigger.primary.sdm660.so|09fdcbda01ddbf2add477f1a974faaed6df6f70f
+vendor/lib/hw/sound_trigger.primary.sdm660.so|1263bde375f1dd3dfdb8418f995f8f0087032888
 vendor/lib/libadpcmdec.so|7c12a153200fd2e9f1f6139fcf40beee1a96f48d
 vendor/lib/libgcs-calwrapper.so|0c4a0700db711c3fffbfdac74cef6b54f278ae11
 vendor/lib/libgcs-ipc.so|32ce32080f5deff1bbd07fb563fdaeb852e3e146
 vendor/lib/libgcs-osal.so|eeda0f28a7be1a5463cb0da0bf4c7534b23d72e4
 vendor/lib/libgcs.so|4e02c27555e40d418181406cdc4a1a094d1ab11e
 vendor/lib/libsmwrapper.so|5406c4930fc71f16d315723d38cc3f316887c6ef
-vendor/lib64/hw/sound_trigger.primary.sdm660.so|5b26898fab32253e67516243df8b778108c32556
+vendor/lib64/hw/sound_trigger.primary.sdm660.so|3dd12db8c6d7f3ebab9d479dd5e74683e04c6201
 vendor/lib64/libgcs-calwrapper.so|52682134cdb34a6a85518ea13722fc3b428158e2
 vendor/lib64/libgcs-ipc.so|f2f7e54bf351e009c09c25fcbb216f54af38695e
 vendor/lib64/libgcs-osal.so|0394ae7df035ae7b371969a38aa2b443b26341a0
