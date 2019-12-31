@@ -1,0 +1,8 @@
+allow init firmware_file:filesystem r_file_perms;
+allow init hal_authsecret_hwservice:hwservice_manager add;
+allow init hal_drm_hwservice:hwservice_manager add;
+allow init hidl_base_hwservice:hwservice_manager add;
+allow init hwservicemanager:binder { call transfer };
+allow init bt_firmware_file:filesystem getattr;
+allow init vendor_file:file { execute execute_no_trans };
+allow init vndbinder_device:chr_file { ioctl open read write };

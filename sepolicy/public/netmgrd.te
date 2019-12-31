@@ -1,0 +1,1 @@
+allow netmgrd system_file:file { execute execute_no_trans getattr open read };

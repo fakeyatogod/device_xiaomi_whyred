@@ -1,0 +1,5 @@
+allow snap_app camera_prop:file { open read };
+allow snap_app gpu_service:service_manager find;
+allow snap_app gpuservice:binder call;
+allow snap_app sysfs_kgsl:dir search;
+allow snap_app camera_prop:file { getattr open read };
