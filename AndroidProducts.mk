@@ -14,4 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_whyred.mk
+    $(LOCAL_DIR)/derp_whyred.mk
+
+COMMON_LUNCH_CHOICES := \
+    derp_whyred-user \
+    derp_whyred-userdebug \
+    derp_whyred-eng
