@@ -1122,33 +1122,6 @@ vendor/lib64/libmlipay.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
 
-# Perf - from jasmine-user 9 PKQ1.180904.001 V10.0.10.0.PDIMIXM release-keys
-lib/libqti_performance.so|dc0995fa3217b6c44029b55b5151adaae515392a
-lib/vendor.qti.hardware.perf@1.0.so|f992941847fd9043f0569e6dc71f89cedccb586f
-lib/libqti-perfd-client_system.so|74f4d9657cf492cf1de2e9b93983f4e7b5431c45
-lib64/libqti_performance.so|9c88af412e0276c578f06e1069b6c3aeae7e3f8d
-lib64/libqti-perfd-client_system.so|de5b61f07d7981bb208167b357f46a9ad083c9e7
-vendor/bin/energy-awareness|6515fada09432a437d2ed591ce141bb70fb10a9e
-vendor/bin/msm_irqbalance|e917104fbd26c844d27ffb2b7ec4f665fdfb8b78
-vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|ecd8296c848b6470a75a6ae7b235d079cacee3a5
-vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
-vendor/etc/perf/commonresourceconfigs.xml|20280e40ca43784316e96be09fe2d2296d79e972
-vendor/etc/perf/perfboostsconfig.xml|f4b70245319440d90381a95f298152f4b1797cb4
-vendor/etc/perf/targetconfig.xml|94689f17cd44969d45815bab3f50829021d6cc7e
-vendor/etc/perf/targetresourceconfigs.xml|2084cab83603da8fb1817902836ffb890dfc8a16
-vendor/lib/libperfgluelayer.so|9e14c8e4bddf1f5c9c03c3b85fd2a44bfad1a977
-vendor/lib/libqti-perfd-client.so|3fa11449bc068278b7a87aa55e161b015cd780f3
-vendor/lib/libqti-perfd.so|f09adaadc93019827274d4eb7725d09412911d82
-vendor/lib/libqti-util.so|e7882172095bb0df546d4c358744761aba932b5a
-vendor/lib/libqti-utils.so|d1e1b7b1abb1a631e3f8b65dcdcc2a5329a94ea8
-vendor/lib/vendor.qti.hardware.perf@1.0.so|f992941847fd9043f0569e6dc71f89cedccb586f
-vendor/lib64/libperfgluelayer.so|afd773f4eb5aaa215706763c2376eaa9d1382143
-vendor/lib64/libqti-perfd-client.so|ac1ca3a6ba93feee4c977cb6e54ca91ab3ce3b23
-vendor/lib64/libqti-perfd.so|184e4a124ef4f509ce377ce3941353948917e605
-vendor/lib64/libqti-util.so|c78b855b3909b01071ced5fc898add769de4a5b6
-vendor/lib64/libqti-utils.so|0411b2b1033fbb699c75c5a7772b8651910f2b97
-vendor/lib64/vendor.qti.hardware.perf@1.0.so|935d13179f58bdc09d31e6be87bdd9fac8afcdbe
-
 # IOP - from jasmine-user 9 PKQ1.180904.001 V10.0.10.0.PDIMIXM release-keys
 lib/vendor.qti.hardware.iop@1.0.so|ba81cff0f438060909c3da6992a86b0e94439072
 lib/vendor.qti.hardware.iop@2.0.so|c5e14aa191331d32a17fd75f3e7ea6ecacce86d9
@@ -1162,6 +1135,29 @@ vendor/lib64/vendor.qti.hardware.iop@2.0.so|cd5ce2c19b10161cc9e08824e33a15487146
 vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so|4aa645e7441c7f146ea287985f98755ddee096db
 vendor/lib64/libqti-iopd-client.so|363be4012d8add25f80c6986894c6d3e2bf2ebab
 vendor/lib64/vendor.qti.hardware.iop@1.0.so|cec08b8610dc998a079b4cb61feeb6d0c99388ca
+
+# Perf - from platina-user 10 QKQ1.190910.002 9.12.26 release-keys
+vendor/bin/energy-awareness|6515fada09432a437d2ed591ce141bb70fb10a9e
+vendor/bin/msm_irqbalance|e917104fbd26c844d27ffb2b7ec4f665fdfb8b78
+vendor/bin/hw/vendor.qti.hardware.perf@2.0-service|57b1e050c9300a72baff8a19872b5a32ae9122e9
+vendor/etc/init/vendor.qti.hardware.perf@2.0-service.rc|cc8658db5e19f8e5e575fb986e7d38147e675f8d
+vendor/etc/perf/commonresourceconfigs.xml|1db765e3a8fb902bdb648091178a709c34f3fb16
+vendor/etc/perf/perfboostsconfig.xml|e33fd8089ccefe6a886e719cc83f328d1481259b
+vendor/etc/perf/targetconfig.xml|376ae331df9d6c30b6208f25d04ae4ea11c0e2ea
+vendor/etc/perf/targetresourceconfigs.xml|7132f1e9ce3bb21b4854b81d6e5d24409251f177
+vendor/lib/libperfconfig.so|2b0fc91a4ab8efcea3a0feaaa8ce5edc237a2214
+vendor/lib/libqti-perfd-client.so|3fa11449bc068278b7a87aa55e161b015cd780f3
+vendor/lib/libqti-perfd.so|f09adaadc93019827274d4eb7725d09412911d82
+vendor/lib/libqti-util.so|e7882172095bb0df546d4c358744761aba932b5a
+vendor/lib/vendor.qti.hardware.perf@1.0.so|5a5aaf8c75efdf5eef5f91dd3dfbd4e85e563fad
+vendor/lib/vendor.qti.hardware.perf@2.0.so|2bd82bb06e4651d59ecc7433680fabbde5173643
+vendor/lib64/libperfconfig.so|3246f50768a84869e9076ac7c273ca9384fea8de
+vendor/lib64/libperfgluelayer.so|bfb9706a184fca4163e5a7cb5fcad11674958761
+vendor/lib64/libqti-perfd-client.so|ac1ca3a6ba93feee4c977cb6e54ca91ab3ce3b23
+vendor/lib64/libqti-perfd.so|184e4a124ef4f509ce377ce3941353948917e605
+vendor/lib64/libqti-util.so|c78b855b3909b01071ced5fc898add769de4a5b6
+vendor/lib64/vendor.qti.hardware.perf@1.0.so|20ca4d33306f92791679071303021c1c752213f5
+vendor/lib64/vendor.qti.hardware.perf@2.0.so|3717b35807fd7b33dced6e311c3b609d57399363
 
 # Peripheral manager - from LA.UM.8.2.r1-04000-sdm660.0
 vendor/bin/pm-proxy|bc4e972e3fe595b973197efe5114da8ff4339a59
@@ -1358,18 +1354,16 @@ vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 
-# Thermal configs - from jasmine_sprout 9 PKQ1.180904.001 V10.0.17.0.PDIMIXM release-keys
-vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
-vendor/etc/thermal-engine-map.conf|474264ed357e02b7bb8b757024275a4cb8ff2929
-vendor/etc/thermal-engine-normal.conf|c7622e7d466b86266eab95d04eff3150f6946980
-vendor/etc/thermal-engine-video.conf|0a40b2cbdf4e744f09cc9f59d6f72590e62e6550
-
-# Thermal - from LA.UM.8.2.r1-04000-sdm660.0
-vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
-vendor/bin/thermal-engine|5b0deee2f319843c32b41be26ec6648cb6fc8560
--vendor/lib/libthermalclient.so|c3aecc7610e8f5775a6f6af2ff7790bef74380a1
--vendor/lib64/libthermalclient.so|84072e150722cc668320f07a75cb8695ce1a79b0
-vendor/lib64/libthermalioctl.so|883cb0b55fc2a0354a8c7f21139767e6a413b4ac
+# Thermal
+vendor/etc/thermal-engine.conf
+vendor/etc/thermal-engine-map.conf
+vendor/etc/thermal-engine-normal.conf
+vendor/bin/thermal-engine
+vendor/lib/libthermalfeature.so
+-vendor/lib/libthermalclient.so
+vendor/lib64/libthermalfeature.so
+-vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalioctl.so
 
 # Time services - from LA.UM.8.2.r1-04000-sdm660.0
 -vendor/app/TimeService/TimeService.apk|4a37afd1395758d946580af184a738e3c657b1e2
