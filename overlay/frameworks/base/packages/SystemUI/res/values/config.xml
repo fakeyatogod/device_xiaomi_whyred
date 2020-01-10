@@ -57,13 +57,8 @@
         <item>405874</item>
     </string-array>
 
-    <integer-array name="carrier_one_strength_threshold_values">
-        <item>-128</item>
-        <item>-120</item>
-        <item>-115</item>
-        <item>-110</item>
-        <item>-105</item>
-        <item>-44</item>
-    </integer-array>
+    <!-- Doze: check proximity sensor before pulsing? -->
+    <bool name="doze_proximity_check_before_pulse">true</bool>
+
 </resources>
 
