@@ -1,4 +1,4 @@
-# 
+#
 # Copyright (C) 2018 The Mokee Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,10 +28,20 @@ $(call inherit-product, device/xiaomi/whyred/device.mk)
 # Inherit from custom vendor
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common I-O-N stuff.
+$(call inherit-product, vendor/ion/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_whyred
+# Gapps
+TARGET_GAPPS_ARCH := arm64
+
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 2140
+
+# I-O-N Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ion.maintainer = facuarmo
+
+PRODUCT_NAME := ion_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
