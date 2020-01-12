@@ -1,2 +1,0 @@
-allow bootanim sysfs_kgsl:dir search;
-allow bootanim sysfs_kgsl:lnk_file read;
