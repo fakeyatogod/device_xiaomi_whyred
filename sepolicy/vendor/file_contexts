@@ -2,38 +2,44 @@
 /dev/spidev7\.1  u:object_r:ir_dev_file:s0
 
 # Fingerprint
-/data/misc/goodix(/.*)?                             u:object_r:fingerprintd_data_file:s0
-/data/gf_data(/.*)?                                 u:object_r:fingerprintd_data_file:s0
-/data/vendor/fpc(/.*)?                              u:object_r:fingerprint_vendor_data_file:s0
-/data/vendor/gf_data(/.*)?                          u:object_r:fingerprint_vendor_data_file:s0
-/data/vendor/goodix(/.*)?                           u:object_r:fingerprint_vendor_data_file:s0
-/dev/goodix_fp                                      u:object_r:fingerprintd_device:s0
-/persist/fpc(/.*)?                                  u:object_r:persist_fingerprint_file:s0
-/sys/devices/soc/soc:fpc1020(/.*)?                  u:object_r:sysfs_fingerprint:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xiaomi_whyred u:object_r:hal_fingerprint_default_exec:s0
+/data/misc/goodix(/.*)?                         											        u:object_r:fingerprintd_data_file:s0
+/data/gf_data(/.*)?                             											        u:object_r:fingerprintd_data_file:s0
+/data/vendor/fpc(/.*)?                         												        u:object_r:fingerprint_vendor_data_file:s0
+/data/vendor/gf_data(/.*)?                     												        u:object_r:fingerprint_vendor_data_file:s0
+/data/vendor/goodix(/.*)?                         											        u:object_r:fingerprint_vendor_data_file:s0
+/dev/goodix_fp                                    											        u:object_r:fingerprintd_device:s0
+/persist/fpc(/.*)?                               											        u:object_r:persist_fingerprint_file:s0
+/sys/devices/soc/soc:fpc1020(/.*)?             												        u:object_r:sysfs_fingerprint:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xiaomi_whyred 						u:object_r:hal_fingerprint_default_exec:s0
 
 # Firmware
-/firmware                                                     u:object_r:firmware_file:s0
-/bt_firmware                                                  u:object_r:bt_firmware_file:s0
+/firmware                                                   											u:object_r:firmware_file:s0
+/bt_firmware                                                 											u:object_r:bt_firmware_file:s0
 
 # Input files
-/vendor/usr/idc(/.*)?                               u:object_r:idc_file:s0
-/vendor/usr/keylayout(/.*)?                         u:object_r:keylayout_file:s0
+/vendor/usr/idc(/.*)?                           									  		        u:object_r:idc_file:s0
+/vendor/usr/keylayout(/.*)?                     											        u:object_r:keylayout_file:s0
 
 # Light HAL
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_whyred u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_whyred 							        u:object_r:hal_light_default_exec:s0
 
 # Touchscreen
-/proc/tp_gesture u:object_r:sysfs_tap_to_wake:s0
+/proc/tp_gesture 																u:object_r:sysfs_tap_to_wake:s0
 
 # Mlipay
-/(vendor|system/vendor)/bin/mlipayd@1.1             u:object_r:hal_mlipay_default_exec:s0
+/(vendor|system/vendor)/bin/mlipayd@1.1            											        u:object_r:hal_mlipay_default_exec:s0
 
 # Shell Script
-/(vendor|system/vendor)/bin/init\.goodix\.sh    u:object_r:init_fingerprint_exec:s0
+/(vendor|system/vendor)/bin/init\.goodix\.sh   												        u:object_r:init_fingerprint_exec:s0
 
 # Video4linux sysfs nodes
-/sys/devices/soc/caa0000\.qcom,jpeg/video4linux/video1(/.*)?   u:object_r:sysfs_graphics:s0
+/sys/devices/soc/caa0000\.qcom,jpeg/video4linux/video1(/.*)?   											u:object_r:sysfs_graphics:s0
 
 # Service HALs
-/(vendor|system/vendor)/bin/hw/android\.hardware\.authsecret@1\.0-service u:object_r:hal_authsecret_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.authsecret@1\.0-service 							                u:object_r:hal_authsecret_default_exec:s0
+
+# DRM
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service.widevine                            						u:object_r:hal_drm_widevine_exec:s0
+
+#Power HALs
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.2-service\.xiaomi_whyred      						        u:object_r:hal_power_default_exec:s0
