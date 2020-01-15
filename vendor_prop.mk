@@ -174,6 +174,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_gl_backpressure=1
 
+# iwlan vowifi corresponding
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.data.iwlan.enable=true
+
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.ims_volte_enable=1 \
