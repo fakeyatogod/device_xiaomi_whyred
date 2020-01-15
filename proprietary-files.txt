@@ -46,13 +46,13 @@ vendor/lib/vendor.qti.hardware.scve.panorama@1.0.so|5ed9860d826b0438625b5a8101a6
 vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so|0909445e5003b5389e2bd17e06a7174c9b1b8e70
 vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so|335c2ef02d72b3e44654c746684feb6a11f19175
 
-# Alarm - from chiron-user 9 PKQ1.190118.001 V10.4.1.0.PDEMIXM release-keys
+# Alarm - from jasmine-user 10 QKQ1.190910.002 V11.0.4.0.QDIMIXM release-keys
 -vendor/app/PowerOffAlarm/PowerOffAlarm.apk|460dd254f1f96d44f4eb00822fe93b44f1b6c3bf
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|b6a5750bbcd3881ee26bf42b1370c567420e0c71
-vendor/bin/power_off_alarm|459ccd83df3fcc076bb82bff60f47d14ad69ad6e
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|faccc2a7d94d486c2f61a5fe85f5c4598b4147a7
+vendor/bin/power_off_alarm|9f800336a28ad1ad111f164b8c779313cddc98c1
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|df138b77fb116a1a786a70c9c76b69d61b5c04d2
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so|6f28bd9425af72d48266ff88b728c61f827571a8
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|1e2631850cc97dfedbde50a9d0d55c8d14881b44
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|271f85f1c6dc0c65dc3aa9a8603f3910fa50e1ea
 
 # ANT+ - from platina-user 10 QKQ1.190910.002 9.12.26 release-keys
 product/lib/com.qualcomm.qti.ant@1.0.so|8119c98f53a94736d95a2fb59225e0a054e038b8
