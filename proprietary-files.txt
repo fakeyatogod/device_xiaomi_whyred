@@ -913,15 +913,15 @@ vendor/lib/mediadrm/libwvdrmengine.so|13f730fba6bd13b6ecf099621f1a14d8072de366
 vendor/lib64/libwvhidl.so|5f42419896d62cfd88ceb104042e23b264719c44
 vendor/lib64/mediadrm/libwvdrmengine.so|29068201cd04f55a3e333fd5b68047de6140bc07
 
-# ESE-Powermanager - from jasmine_sprout 9 PKQ1.180904.001 V10.0.17.0.PDIMIXM release-keys
-vendor/bin/hw/vendor.qti.esepowermanager@1.0-service|7596758328bb4a1df43bf4ea85b729f55266ac29
+# ESE-Powermanager - from jasmine-user 10 QKQ1.190910.002 V11.0.4.0.QDIMIXM release-keys
+product/lib/vendor.qti.esepowermanager@1.0.so|07b5def050ef3200ed8946bf33be4f60049cd4aa
+product/lib64/vendor.qti.esepowermanager@1.0.so|165a6b6f6fec38055a178d2d5903de5756a44571
+vendor/bin/hw/vendor.qti.esepowermanager@1.0-service|4191e27a3e97009789dfcd2c44fd202d152fa61b
 vendor/etc/init/vendor.qti.esepowermanager@1.0-service.rc|58a3866ad5a7613d9392c9adb671eaa7825578a2
-lib/vendor.qti.esepowermanager@1.0.so|95497c6d29c526db91632af4ccd6afcca5875950
-lib64/vendor.qti.esepowermanager@1.0.so|be2765f72207dbaf0a02d0b9b7ba799ef3f3a608
-vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so|8232cfb985508bfbedc250613f9b22852d4924bd
-vendor/lib/vendor.qti.esepowermanager@1.0.so|4db79f08856ceafacb2561209ec7a0bf777fe30c
-vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so|3d3d4a74d5d4d2f70ce6fc073893446d7415cac0
-vendor/lib64/vendor.qti.esepowermanager@1.0.so|a16afae6ca6fa221f3e3fa0989c190262d87aca4
+vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so|fd95cf6c9b36324fb5d0e5e8498721b65749ee94
+vendor/lib/vendor.qti.esepowermanager@1.0.so|12f57cdb3ea7f7e7a248f9a3d7de4f8e5755ac79
+vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so|b9a03bfc607fb74462346eecacf27a7afda8d114
+vendor/lib64/vendor.qti.esepowermanager@1.0.so|0dc949a16129a9d3d06429723641b6fba11ee1d2
 
 # Fingerprint firmware - from jasmine_sprout 9 PKQ1.180904.001 V10.0.17.0.PDIMIXM release-keys
 etc/firmware/goodixfp.b00:vendor/firmware/goodixfp.b00|c5c3594b47dffb3aadb81abced42518d24637893
