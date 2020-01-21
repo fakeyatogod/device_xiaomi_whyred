@@ -44,3 +44,5 @@ dontaudit hal_fingerprint_default media_rw_data_file:dir { read open };
 dontaudit hal_fingerprint_default media_rw_data_file:file { getattr };
 dontaudit hal_fingerprint_default hal_perf_hwservice:hwservice_manager find;
 dontaudit hal_fingerprint_default hal_fingerprint_hwservice:hwservice_manager add;
+
+r_dir_file(hal_fingerprint_default, sysfs_devfreq)
