@@ -1557,3 +1557,17 @@ vendor/lib/libwfdmmservice.so|1da47f32b690c527aea72d291270e38d472c359e
 vendor/lib/libwfdmodulehdcpsession.so|539e378b536abcda0f9d4da068b50e7cd5c020d1
 vendor/lib64/libmmosal_proprietary.so|3e61257e525983a11a6198fac1fdf17afec4823e
 vendor/lib64/libwfdhdcpcp.so|cd7c9b49b094918d202edc50746b266a6761c585
+
+# Common Camera - wew
+vendor/lib/libchromaflash.so
+vendor/lib/libllvd_smore.so
+vendor/lib/libmmcamera_chromaflash_lib.so
+vendor/lib/libmmcamera_llvd.so
+vendor/lib/libmmcamera_optizoom_lib.so
+vendor/lib/libmmcamera_stillmore_lib.so
+vendor/lib/libmmcamera_trueportrait_lib.so
+vendor/lib/libmmcamera_ubifocus_lib.so
+vendor/lib/liboptizoom.so
+vendor/lib/libseemore.so
+vendor/lib/libtrueportrait.so
+vendor/lib/libubifocus.so
