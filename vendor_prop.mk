@@ -104,6 +104,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.media.codec2=2
 
+# Dpm
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.dpm.feature=0
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
