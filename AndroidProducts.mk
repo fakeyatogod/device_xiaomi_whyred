@@ -14,4 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_whyred.mk
+    $(LOCAL_DIR)/bliss_whyred.mk
+
+COMMON_LUNCH_CHOICES := \
+		bliss_whyred-eng \
+		bliss_whyred-userdebug \
+		bliss_whyred-user
