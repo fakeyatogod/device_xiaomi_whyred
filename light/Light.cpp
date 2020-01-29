@@ -22,11 +22,9 @@
 
 #include <fstream>
 
-#define LEDS            "/sys/class/leds/"
-
-#define LCD_LED         LEDS "lcd-backlight/"
-#define WHITE_LED       LEDS "red/"
-
+#define LEDS                       "/sys/class/leds/"
+#define LCD_LED                    LEDS "lcd-backlight/"
+#define WHITE                      LEDS "white/"
 #define BLINK           "blink"
 #define BRIGHTNESS      "brightness"
 #define MAX_BRIGHTNESS  "max_brightness"
