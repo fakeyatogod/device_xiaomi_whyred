@@ -41,5 +41,6 @@ set_prop(hal_fingerprint_default, vendor_fp_prop);
 
 dontaudit hal_fingerprint_default { media_rw_data_file sdcardfs}:dir search;
 dontaudit hal_fingerprint_default media_rw_data_file:dir { read open };
+dontaudit hal_fingerprint_default media_rw_data_file:file { getattr };
 dontaudit hal_fingerprint_default hal_perf_hwservice:hwservice_manager find;
 dontaudit hal_fingerprint_default hal_fingerprint_hwservice:hwservice_manager add;
