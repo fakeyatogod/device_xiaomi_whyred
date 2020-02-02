@@ -1322,7 +1322,7 @@ vendor/lib64/libqcmaputils.so|eacd5bec984bae24bda1f041975357b2d72edfc2
 vendor/lib64/libqcrilFramework.so|033b66e7c3351268c576b8a2e7906dd08fc70567
 vendor/lib64/libqrtr.so|9addbb504885bb2a82e0b19e38077742bc48c10f
 vendor/lib64/libqsocket.so|dd4067d7a79565f11034277d4ef46698cd17c19b
-vendor/lib64/libril-qc-hal-qmi.so|6179681a5e9cda6310ceab5095e640d9759fbe41
+vendor/lib64/libril-qc-hal-qmi.so|35d41b090077b4cc87259b33ab02d677bfa8fca7
 vendor/lib64/libril-qc-ltedirectdisc.so|1bb5daeb65a48eb5dbac5db7f1fe8975fcb6be28
 vendor/lib64/libril-qc-qmi-1.so|f838b08b92273a22710bf4359fffd365eea91044
 vendor/lib64/libril-qc-radioconfig.so|c37def8f254404839a413918e94c4aab4d6de137
