@@ -223,4 +223,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.use_old_mnc_mcc_format=true \
-    ro.telephony.iwlan_operation_mode=legacy
+	persist.sys.fflag.override.settings_network_and_internet_v2=true \
+	ro.telephony.iwlan_operation_mode=legacy
