@@ -145,6 +145,9 @@ TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
 
+# Enable stats logging in LMKD
+TARGET_LMKD_STATS_LOG := true
+
 # Media
 TARGET_USES_MEDIA_EXTENSIONS := true
 
