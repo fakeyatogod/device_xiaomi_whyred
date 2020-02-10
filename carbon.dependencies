@@ -1,0 +1,8 @@
+[
+  {
+    "remote": "lineage",
+    "revision": "lineage-17.1",
+    "repository": "LineageOS/android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings"
+  }
+]
