@@ -25,6 +25,7 @@ $(call inherit-product, vendor/xiaomi/whyred/whyred-vendor.mk)
 
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_prop.mk
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Dirac
 $(call inherit-product, vendor/dirac/dirac.mk)
