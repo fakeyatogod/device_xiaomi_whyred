@@ -3,6 +3,7 @@ allow thermal-engine sysfs:dir { read open };
 allow thermal-engine vendor_data_file:dir r_dir_perms;
 allow thermal-engine thermal_data_file:dir rw_dir_perms;
 allow thermal-engine thermal_data_file:file create_file_perms;
+allow thermal-engine sysfs:dir r_dir_perms;
 allow thermal-engine self:capability { chown fowner };
 dontaudit thermal-engine self:capability dac_override;
 
