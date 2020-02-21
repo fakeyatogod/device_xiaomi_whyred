@@ -1,5 +1,16 @@
 #Tap to Wake
-genfscon proc /tp_gesture u:object_r:sysfs_tap_to_wake:s0
+genfscon proc /tp_gesture                                       u:object_r:sysfs_tap_to_wake:s0
+
+genfscon sysfs /devices/soc/soc:fingerprint_fpc/device_prepare  u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fingerprint_fpc/fingerdown_wait u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fingerprint_fpc/irq             u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fingerprint_fpc/irq_enable      u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fingerprint_fpc/wakeup_enable   u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fpc1020/device_prepare          u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fpc1020/fingerdown_wait         u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fpc1020/irq                     u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fpc1020/irq_enable              u:object_r:sysfs_fingerprint:s0
+genfscon sysfs /devices/soc/soc:fpc1020/wakeup_enable           u:object_r:sysfs_fingerprint:s0
 
 # Power
 genfscon debugfs /rpm_stats                                     u:object_r:debugfs_rpm:s0
