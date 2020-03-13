@@ -1,3 +1,6 @@
 dontaudit priv_app { firmware_file bt_firmware_file }:filesystem getattr;
 allow priv_app sysfs_kgsl:lnk_file read;
 allow priv_app sysfs_kgsl:dir { search };
+allow priv_app sysfs_graphics:file r_file_perms;
+allow priv_app theme_prop:file { read open getattr };
+
