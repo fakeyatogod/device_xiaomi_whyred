@@ -4,6 +4,7 @@ binder_call(hal_camera_default, hal_graphics_allocator_default)
 
 allow hal_camera_default sysfs:file { getattr open read };
 allow hal_camera_default sysfs_kgsl:file { getattr open read };
+allow hal_camera_default sysfs_kgsl:dir { search };
 
 # Allow hal_camera_default to search in mnt/vendor
 allow hal_camera_default mnt_vendor_file:dir search;
@@ -11,6 +12,5 @@ allow hal_camera_default mnt_vendor_file:dir search;
 # Allow hal_camera_default to read sys files
 allow hal_camera_default sysfs:file read;
 
-
-
-
+hal_client_domain(hal_camera_default, hal_graphics_allocator)
+hal_client_domain(hal_camera_default, hal_configstore)
