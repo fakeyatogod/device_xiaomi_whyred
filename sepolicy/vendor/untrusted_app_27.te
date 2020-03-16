@@ -1,4 +1,5 @@
 get_prop(untrusted_app_27, persist_camera_prop) 
 get_prop(untrusted_app_27, camera_prop) 
 dontaudit untrusted_app_27 proc_vmstat:file { getattr open };
-dontaudit untrusted_app_27 sysfs_kgsl:lnk_file read;
+allow untrusted_app_27 sysfs_kgsl:lnk_file read;
+allow untrusted_app_27 sysfs_kgsl:dir { search };

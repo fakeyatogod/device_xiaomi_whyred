@@ -1,0 +1,7 @@
+# Allow the specified domain rw_file_perms to diag_device
+# in userdebug or eng builds, donotaudit otherwise.
+userdebug_or_eng(`
+  allow qti diag_device:chr_file rw_file_perms;
+')
+# Ignore in user builds
+dontaudit qti diag_device:chr_file rw_file_perms;
