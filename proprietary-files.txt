@@ -1269,14 +1269,14 @@ vendor/lib64/qtibus.so|458570d3a9d69e028cee3d91cabbbe916c733e13
 vendor/lib64/qtimutex.so|0cf66f773b9daa59d99a1207fc0f85aad4942535
 
 # Radio - from jasmine-user 10 QKQ1.190910.002 V11.0.4.0.QDIMIXM release-keys
--product/app/QtiTelephonyService/QtiTelephonyService.apk|db60b6fe27b3033f6468b3170b23af18dd0bcdaf
+-product/app/QtiTelephonyService/QtiTelephonyService.apk|9233f71f7bf7071e2ed53dc5383b06c175ade1bf
 -product/app/datastatusnotification/datastatusnotification.apk|272156d88ac5a05f76fcea7f1a31087e1acbcd85
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|20c011ffc54539161fa7cc05c55c9c5ed3f936b4
 product/etc/permissions/qcrilhook.xml|ceb890ab3c1645aa0d0044abab1ba58c4097a991
 product/etc/permissions/telephonyservice.xml|a39eefcaf85fb8da60044fdbbcfddd95deb031c8
-product/framework/QtiTelephonyServicelibrary.jar|ea30b05eaad3ebee157421b3f31bf8585566b4cd
+product/framework/QtiTelephonyServicelibrary.jar|ee040ed40595a0c5871780b1d5be753954ae523d
 product/framework/qcrilhook.jar|4eece9eb40a8976d2fd9a6a4d5d6dfea0c7674f5
-product/framework/qti-telephony-common.jar|5b1c23ce0d42e1b666d387eedde3444dd07e61bc
+product/framework/qti-telephony-common.jar|64cfd316d246dd890857dcd1c853e75be4ad5d3e
 product/lib/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so|2687777322bb36e0ae14592c7b1ac71eacbbdc95
 product/lib64/vendor.qti.hardware.radio.internal.deviceinfo@1.0.so|42e64cf6723082cd81a86636555d35e31c600a35
 vendor/bin/ATFWD-daemon|bc2492087298a328d76d60560b11e480a79f3ad9
@@ -1357,7 +1357,7 @@ vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql|0571aacaf9fc
 product/lib/libdiag_system.so|1f5ced1d806da4fef54f8120d4d18528ccdea357
 product/lib64/libdiag_system.so|0903778a417c572dd4829bf703cec2266e079d96
 -product/app/imssettings/imssettings.apk|a1cc6f2e1ab37fb24dadad5d3b45c425e72c1e4a
--product/priv-app/ims/ims.apk|fe11b3fe75a52e586ca6390adbd1b234f4f565ed
+-product/priv-app/ims/ims.apk|f9b27cf9af789e3905d7beb9cd9602d1e58c2a25
 etc/permissions/com.qualcomm.qti.imscmservice.xml|db25ef24f1937366d58a53b4f4b8923bc9e98d2d
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml|aeaf8d4c7d421bd25a1aca1736980b6e4575c7ce
 product/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml|d52cdba3a8f1c00098568965c0cbaa03502f961e
