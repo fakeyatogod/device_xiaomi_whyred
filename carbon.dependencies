@@ -4,5 +4,11 @@
     "revision": "lineage-17.1",
     "repository": "LineageOS/android_packages_resources_devicesettings",
     "target_path": "packages/resources/devicesettings"
+  },
+  {
+    "remote": "gh"
+    "revision": "lineage-17.0",
+    "repository": "xiaomi-sdm660/android_vendor_xiaomi_MiuiCamera",
+    "target_path": "vendor/xiaomi/MiuiCamera"
   }
 ]
