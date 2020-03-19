@@ -12,5 +12,11 @@ allow hal_camera_default mnt_vendor_file:dir search;
 # Allow hal_camera_default to read sys files
 allow hal_camera_default sysfs:file read;
 
+
+typeattribute hal_camera_default vendor_executes_system_violators;
+allow hal_camera_default system_file:file r_file_perms;
+allow hal_camera_default cgroup_desc_file:file r_file_perms;
+
+
 hal_client_domain(hal_camera_default, hal_graphics_allocator)
 hal_client_domain(hal_camera_default, hal_configstore)
