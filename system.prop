@@ -167,6 +167,9 @@ persist.chg.max_volt_mv=9000
 #system prop for Bluetooth SOC type
 vendor.bluetooth.soc=cherokee
 
+#misc tweaks
+pm.sleep_mode=1
+
 # Property for backup NTP Server
 persist.backup.ntpServer="0.pool.ntp.org"
 # enable IZat OptInApp overlay
