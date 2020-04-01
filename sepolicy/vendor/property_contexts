@@ -29,3 +29,6 @@ sys.thermal.                        u:object_r:thermal_prop:s0
 # vendor_default_prop
 fpc_kpi                             u:object_r:vendor_default_prop:s0
 gpu.stats.debug.level               u:object_r:vendor_default_prop:s0
+
+# Fix for WLAN tethering offload
+wifi.active.interface               u:object_r:exported_wifi_prop:s0
