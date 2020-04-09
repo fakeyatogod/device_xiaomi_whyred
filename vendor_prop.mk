@@ -110,15 +110,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
     debug.stagefright.omx_default_rank=0
 
-# Rendering
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.enable.sglscale=1 \
-    debug.egl.hw=1 \
-    debug.sf.disable_hwc=0 \
-    debug.sf.recomputecrop=0 \
-    persist.hwc.ptor.enable=true \
-    debug.sf.gpu_comp_tiling=1
-
 #Set speaker protection cal tx path sampling rate to 48k
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.spkr_prot.tx.sampling_rate=48000
@@ -173,23 +164,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.sta_detect=true
 
 # SurfaceFlinger
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
+    ro.surface_flinger.protected_contents=true \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.surface_flinger.max_virtual_display_dimension=4096 \
     ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
-# Copy to default prop
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-     ro.surface_flinger.protected_contents=true
-
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_phase_offset_ns=1500000 \
     debug.sf.early_app_phase_offset_ns=1500000 \
     debug.sf.early_gl_phase_offset_ns=3000000 \
-    debug.sf.early_gl_app_phase_offset_ns=15000000
-
+    debug.sf.early_gl_app_phase_offset_ns=15000000 \
+    debug.sf.latch_unsignaled=1 \
+    debug.sf.disable_backpressure=1 \
+    debug.sf.enable_gl_backpressure=1
 
 # The default sf phase offset is set to 6ms, to avoid it be included into next
 # vsync threshold, set high fps early sf and next vsync threshold phase offset
@@ -199,10 +189,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.high_fps_early_gl_phase_offset_ns=9000000 \
     debug.sf.phase_offset_threshold_for_next_vsync_ns=6100000
 
-
-# Enable backpressure for GL comp
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.enable_gl_backpressure=1
 
 # iwlan vowifi corresponding
 PRODUCT_PROPERTY_OVERRIDES += \
