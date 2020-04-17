@@ -53,7 +53,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.spkr_prot.tx.sampling_rate=48000 \
     vendor.audio.adm.buffering.ms=12 \
     persist.vendor.audio.hw.binder.size_kbyte=1024 \
-    vendor.fm.a2dp.conc.disabled=true
+    vendor.fm.a2dp.conc.disabled=true \
+    persist.vendor.service.bdroid.sibs=false
 
 #add dynamic feature flags here
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -144,7 +145,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.HAL3.enabled=1 \
     persist.vendor.camera.ltm.overlap=13
 
-
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sdk.sensors.gestures=false \
@@ -180,7 +180,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.high_fps_early_phase_offset_ns=6100000 \
     debug.sf.high_fps_early_gl_phase_offset_ns=9000000 \
     debug.sf.phase_offset_threshold_for_next_vsync_ns=6100000
-
 
 # iwlan vowifi corresponding
 PRODUCT_PROPERTY_OVERRIDES += \
