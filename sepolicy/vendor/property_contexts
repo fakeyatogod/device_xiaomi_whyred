@@ -25,6 +25,12 @@ vendor.powerhal.init                u:object_r:power_prop:s0
 vendor.powerhal.rendering           u:object_r:power_prop:s0
 vendor.powerhal.state               u:object_r:power_prop:s0
 
+# RIL
+ro.build.software.version               u:object_r:exported_radio_prop:s0
+ro.fota.oem                             u:object_r:exported_radio_prop:s0
+ro.miui.                                u:object_r:exported_radio_prop:s0
+ro.product.mod_device                   u:object_r:exported_radio_prop:s0
+
 # Thermal engine
 persist.sys.thermal.                u:object_r:thermal_prop:s0
 sys.thermal.                        u:object_r:thermal_prop:s0
