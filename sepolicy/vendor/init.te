@@ -1,3 +1,4 @@
 allow init hal_memtrack_default:process noatsecure;
 # Allow init to mount offmode charging daemon
 allow init rootfs:file mounton;
+allow init vendor_file:file { execute };
