@@ -13,3 +13,6 @@ set_prop(vendor_init, power_prop)
 
 allow vendor_init rootfs:dir { add_name create setattr write };
 allow vendor_init rootfs:lnk_file setattr;
+
+allow vendor_init blkio_device:file w_file_perms;
+allow vendor_init proc_dirty:file write;
