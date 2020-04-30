@@ -66,6 +66,10 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/whyred
 TARGET_KERNEL_CONFIG := whyred-perf_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 
+ifneq ($(CARBON_BUILD),)
+TARGET_KERNEL_CLANG_VERSION := r377782d
+endif
+
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
 
