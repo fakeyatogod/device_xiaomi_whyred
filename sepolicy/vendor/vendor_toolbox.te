@@ -36,3 +36,10 @@ allow vendor_toolbox {
     unlabeled
     vendor_persist_mmi_file
 }:dir { r_dir_perms setattr };
+
+allow vendor_toolbox {
+    persist_alarm_file
+    persist_time_file
+    media_rw_data_file
+    sensors_persist_file
+}:file { getattr };
