@@ -44,11 +44,6 @@ case "$baseband" in
 esac
 
 case "$baseband" in
-    "sa8")
-
-esac
-
-case "$baseband" in
     "msm" | "csfb" | "svlte2a" | "mdm" | "mdm2" | "sglte" | "sglte2" | "dsda2" | "unknown" | "dsda3" | "sdm" | "sdx" | "sm6")
 
     # For older modem packages launch ril-daemon.
@@ -100,6 +95,18 @@ case "$baseband" in
         start vendor.ril-daemon
     fi
 
+    case "$baseband" in
+        "svlte2a" | "csfb")
+          start qmiproxy
+        ;;
+        "sglte" | "sglte2" )
+          if [ "x$sgltecsfb" != "xtrue" ]; then
+              start qmiproxy
+          else
+              setprop persist.vendor.radio.voice.modem.index 0
+          fi
+        ;;
+    esac
 
     multisim=`getprop persist.radio.multisim.config`
 
@@ -122,9 +129,11 @@ case "$baseband" in
     case "$datamode" in
         "tethered")
             start vendor.dataqti
+            start vendor.dataadpl
             ;;
         "concurrent")
             start vendor.dataqti
+            start vendor.dataadpl
             ;;
         *)
             ;;
