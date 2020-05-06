@@ -2725,16 +2725,8 @@ case "$target" in
             echo 0-3 > /dev/cpuset/background/cpus
             echo 0-3 > /dev/cpuset/system-background/cpus
 
-            #if the kernel version >=4.14,use the schedutil governor
-            KernelVersionStr=`cat /proc/sys/kernel/osrelease`
-            KernelVersionS=${KernelVersionStr:2:2}
-            KernelVersionA=${KernelVersionStr:0:1}
-            KernelVersionB=${KernelVersionS%.*}
-            if [ $KernelVersionA -ge 4 ] && [ $KernelVersionB -ge 14 ]; then
-                sdm660_sched_schedutil_dcvs
-            else
-                sdm660_sched_interactive_dcvs
-            fi
+            # ALways use the schedutil governor
+            sdm660_sched_schedutil_dcvs
 
             # Set Memory parameters
             configure_memory_parameters
