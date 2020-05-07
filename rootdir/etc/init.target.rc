@@ -284,12 +284,6 @@ service audiod /system/vendor/bin/audiod
    user system
    group system
 
-service vendor.cdsprpcd /vendor/bin/cdsprpcd
-   class main
-   user system
-   group system
-   disabled
-
 service vendor.pd_mapper /system/vendor/bin/pd-mapper
     class core
 
