@@ -225,3 +225,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.use_old_mnc_mcc_format=true \
 	persist.sys.fflag.override.settings_network_and_internet_v2=true \
 	ro.telephony.iwlan_operation_mode=legacy
+	
+# LMKD
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.low_ram=false \
+    ro.lmk.use_psi=false \
+    ro.lmk.kill_heaviest_task=true \
+    ro.lmk.kill_timeout_ms=100 \
+    ro.lmk.use_minfree_levels=true \
+    ro.lmk.log_stats=true
+
