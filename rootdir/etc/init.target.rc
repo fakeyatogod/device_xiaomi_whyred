@@ -314,7 +314,7 @@ on property:init.svc.zygote=restarting
     stop ppd
 
 on property:sys.boot_completed=1
-    setprop sys.io.scheduler "bfq"
+    setprop sys.io.scheduler "cfq"
 
 on property:vendor.post_boot.parsed=1
     # Setup permission for Power HAL
