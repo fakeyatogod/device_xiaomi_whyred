@@ -219,12 +219,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.data_ltd_sys_ind=1 \
     persist.vendor.radio.procedure_bytes=SKIP \
     persist.radio.calls.on.ims=1 \
-    persist.dbg.wfc_avail_ovr=1
-
-PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.wfc_avail_ovr=1 \
     ro.telephony.use_old_mnc_mcc_format=true \
 	persist.sys.fflag.override.settings_network_and_internet_v2=true \
-	ro.telephony.iwlan_operation_mode=legacy
+	ro.telephony.iwlan_operation_mode=legacy \
+    persist.radio.NO_STAPA=1
 	
 # LMKD
 PRODUCT_PROPERTY_OVERRIDES += \
