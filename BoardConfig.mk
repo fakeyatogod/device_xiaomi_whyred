@@ -202,6 +202,9 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 ENABLE_VENDOR_RIL_SERVICE := true
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
+# RRO configuration
+TARGET_USES_RRO := true
+
 # Security patch level
 VENDOR_SECURITY_PATCH := 2020-06-01
 
