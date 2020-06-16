@@ -222,8 +222,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.calls.on.ims=1 \
     persist.dbg.wfc_avail_ovr=1 \
     ro.telephony.use_old_mnc_mcc_format=true \
-	persist.sys.fflag.override.settings_network_and_internet_v2=true \
-	ro.telephony.iwlan_operation_mode=legacy \
+    persist.sys.fflag.override.settings_network_and_internet_v2=true \
+    ro.telephony.iwlan_operation_mode=legacy \
     persist.radio.NO_STAPA=1
 	
 # LMKD
@@ -235,3 +235,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.lmk.use_minfree_levels=true \
     ro.lmk.log_stats=true
 
+#Listen
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.audio.soundtrigger=nuance \
+    ro.vendor.audio.soundtrigger.lowpower=false \
+    ro.vendor.audio.soundtrigger.phrase.level=40 \
+    ro.vendor.audio.soundtrigger.user.level=60 \
+    ro.vendor.audio.soundtrigger.phrase.adsp.level=40 \
+    ro.vendor.audio.soundtrigger.user.adsp.level=60 \
+    ro.vendor.audio.soundtrigger.training.level=50
