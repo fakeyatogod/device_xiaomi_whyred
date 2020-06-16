@@ -26,10 +26,11 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <fstream>
+#include <android-base/properties.h>
 #include <unistd.h>
 
-#include <android-base/properties.h>
+#include <fstream>
+#include <vector>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
@@ -39,41 +40,52 @@
 using android::base::GetProperty;
 using android::init::property_set;
 
-void property_override(char const prop[], char const value[])
-{
-    prop_info *pi;
-     pi = (prop_info*) __system_property_find(prop);
+std::vector<std::string> ro_props_default_source_order = {
+        "", "odm.", "product.", "system.", "vendor.",
+};
+
+void property_override(char const prop[], char const value[], bool add = true) {
+    prop_info* pi;
+
+    pi = (prop_info*)__system_property_find(prop);
     if (pi)
         __system_property_update(pi, value, strlen(value));
-    else
+    else if (add)
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
- void property_override_dual(char const system_prop[],
-        char const vendor_prop[], char const value[])
-{
-    property_override(system_prop, value);
-    property_override(vendor_prop, value);
-}
 
-static void init_setup_model_properties()
-{
+static void init_setup_model_properties() {
+    const auto set_ro_build_prop = [](const std::string& source, const std::string& prop,
+                                      const std::string& value) {
+        auto prop_name = "ro." + source + "build." + prop;
+        property_override(prop_name.c_str(), value.c_str(), false);
+    };
+
+    const auto set_ro_product_prop = [](const std::string& source, const std::string& prop,
+                                        const std::string& value) {
+        auto prop_name = "ro.product." + source + prop;
+        property_override(prop_name.c_str(), value.c_str(), false);
+    };
+
     std::ifstream fin;
     std::string buf;
 
     fin.open("/proc/cmdline");
     while (std::getline(fin, buf, ' '))
-        if (buf.find("androidboot.hwc") != std::string::npos)
-            break;
+        if (buf.find("androidboot.hwc") != std::string::npos) break;
     fin.close();
 
     if (buf.find("CN") != std::string::npos || buf.find("Global") != std::string::npos) {
-        property_override_dual("ro.product.model", "ro.vendor.product.model", "Redmi Note 5");
+        for (const auto& source : ro_props_default_source_order) {
+            set_ro_product_prop(source, "model", "Redmi Note 5");
+        }
     } else {
-        property_override_dual("ro.product.model", "ro.vendor.product.model",  "Redmi Note 5 Pro");
+        for (const auto& source : ro_props_default_source_order) {
+            set_ro_product_prop(source, "model", "Redmi Note 5 Pro");
+        }
     }
 }
 
-void vendor_load_properties()
-{
+void vendor_load_properties() {
     init_setup_model_properties();
 }
