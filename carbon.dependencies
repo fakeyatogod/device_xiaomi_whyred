@@ -18,5 +18,11 @@
     "revision": "ten",   
     "repository": "fakeyatogod/vendor_dirac",
     "target_path": "vendor/dirac"
+  },
+  {
+    "remote": "lineage",
+    "revision": "lineage-17.1",
+    "repository": "LineageOS/android_vendor_qcom_opensource_fm-commonsys",
+    "target_path": "vendor/qcom/opensource/fm-commonsys"
   }
 ]
