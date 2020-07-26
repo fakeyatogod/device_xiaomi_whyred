@@ -59,7 +59,7 @@
         <usecase name="USECASE_AUDIO_RECORD_AFE_PROXY" type="in" id="7"/>
         <usecase name="USECASE_AUDIO_RECORD_LOW_LATENCY" type="in" id="17" />
         <usecase name="USECASE_AUDIO_PLAYBACK_ULL" type="out" id="17" />
-        <usecase name="USECASE_AUDIO_PLAYBACK_EXT_DISP_SILENCE" type="out" id="27" />
+        <usecase name="USECASE_AUDIO_PLAYBACK_SILENCE" type="out" id="27" />
         <usecase name="USECASE_AUDIO_HFP_SCO" type="in" id="12" />
         <usecase name="USECASE_AUDIO_HFP_SCO_WB" type="in" id="12" />
         <usecase name="USECASE_INCALL_REC_UPLINK" type="in" id="27" />
@@ -73,12 +73,13 @@
         <param key="spkr_1_tz_name" value="wsatz.11"/>
         <param key="spkr_2_tz_name" value="wsatz.12"/>
         <param key="true_32_bit" value="true"/>
-        <!--param key="native_audio_mode" value="true"/-->
+        <param key="native_audio_mode" value="true"/>
         <param key="hfp_pcm_dev_id" value="39"/>
         <param key="input_mic_max_count" value="4"/>
     </config_params>
     <acdb_ids>
         <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="15"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" acdb_id="15"/>
         <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED" acdb_id="124"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_PROTECTED" acdb_id="101"/>
         <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED_VBAT" acdb_id="124"/>
@@ -88,14 +89,24 @@
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_2_PROTECTED_VBAT" acdb_id="150"/>
         <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK_MONO_1" acdb_id="151"/>
         <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK_MONO_2" acdb_id="152"/>
-        
+        <device name="SND_DEVICE_OUT_SPEAKER_EXTERNAL_1" acdb_id="14"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_EXTERNAL_2" acdb_id="14"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_VBAT" acdb_id="135"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES_EXTERNAL_1" acdb_id="10"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES_EXTERNAL_2" acdb_id="10"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER_VBAT" acdb_id="135"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER_2_VBAT" acdb_id="135"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_USB_HEADSET" acdb_id="45"/>
+        <device name="SND_DEVICE_IN_HDMI_MIC" acdb_id="4"/>
+        <device name="SND_DEVICE_IN_HANDSET_TMIC_FLUENCE_PRO" acdb_id="125"/>
+        <device name="SND_DEVICE_IN_HANDSET_TMIC" acdb_id="125"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" acdb_id="124"/>
         <device name="SND_DEVICE_OUT_VOICE_HANDSET" acdb_id="18"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="34"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_2" acdb_id="34"/>
         <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" acdb_id="52"/>
         <device name="SND_DEVICE_OUT_VOICE_USB_HEADSET" acdb_id="52"/>
-	<device name="SND_DEVICE_OUT_VOICE_USB_HEADPHONES" acdb_id="52"/>
+        <device name="SND_DEVICE_OUT_VOICE_USB_HEADPHONES" acdb_id="52"/>
         <device name="SND_DEVICE_OUT_BT_SCO" acdb_id="66"/>
         <device name="SND_DEVICE_OUT_BT_SCO_WB" acdb_id="578"/>
         <device name="SND_DEVICE_OUT_VOICE_TX" acdb_id="52"/>
@@ -119,7 +130,7 @@
         <device name="SND_DEVICE_IN_CAMCORDER_MIC" acdb_id="4"/>
         <device name="SND_DEVICE_IN_VOICE_DMIC" acdb_id="277"/>
         <device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC" acdb_id="293"/>
-	<device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC_ECHO" acdb_id="293"/>
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC_ECHO" acdb_id="293"/>
         <device name="SND_DEVICE_IN_VOICE_RX" acdb_id="819"/>
         <device name="SND_DEVICE_IN_VOICE_REC_MIC" acdb_id="10003"/>
         <device name="SND_DEVICE_IN_CAPTURE_FM" acdb_id="0"/>
@@ -213,14 +224,14 @@
         <device name="SND_DEVICE_IN_HANDSET_DMIC_VOICE" interface="INT3_MI2S_TX"/>
         <device name="SND_DEVICE_IN_HANDSET_DMIC_MUSIC" interface="INT3_MI2S_TX"/>
         <device name="SND_DEVICE_IN_HANDSET_DMIC_INTERVIEW" interface="INT3_MI2S_TX"/>
-	<device name="SND_DEVICE_IN_HANDSET_DMIC_HD" interface="INT3_MI2S_TX"/>
-	<device name="SND_DEVICE_IN_VOICE_SPEAKER_TMIC" interface="INT3_MI2S_TX"/>
-	<device name="SND_DEVICE_IN_VOICE_SPEAKER_TMIC_CONF" interface="INT3_MI2S_TX"/>
-	<device name="SND_DEVICE_IN_CAMCORDER_DMIC" interface="INT3_MI2S_TX"/>
-	<device name="SND_DEVICE_IN_CAMCORDER_TMIC" interface="INT3_MI2S_TX"/>
-	<device name="SND_DEVICE_IN_CAMCORDER_TMIC_FAR_END" interface="INT3_MI2S_TX"/>
-	<device name="SND_DEVICE_IN_CAMCORDER_TMIC_NEAR_END" interface="INT3_MI2S_TX"/>
-	<device name="SND_DEVICE_IN_VOICE_USB_HEADSET_MIC" interface="USB_AUDIO_TX"/>
+        <device name="SND_DEVICE_IN_HANDSET_DMIC_HD" interface="INT3_MI2S_TX"/>
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_TMIC" interface="INT3_MI2S_TX"/>
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_TMIC_CONF" interface="INT3_MI2S_TX"/>
+        <device name="SND_DEVICE_IN_CAMCORDER_DMIC" interface="INT3_MI2S_TX"/>
+        <device name="SND_DEVICE_IN_CAMCORDER_TMIC" interface="INT3_MI2S_TX"/>
+        <device name="SND_DEVICE_IN_CAMCORDER_TMIC_FAR_END" interface="INT3_MI2S_TX"/>
+        <device name="SND_DEVICE_IN_CAMCORDER_TMIC_NEAR_END" interface="INT3_MI2S_TX"/>
+        <device name="SND_DEVICE_IN_VOICE_USB_HEADSET_MIC" interface="USB_AUDIO_TX"/>
         <device name="SND_DEVICE_IN_HEADSET_MIC_FLUENCE" interface="INT3_MI2S_TX"/>
         <device name="SND_DEVICE_IN_VOICE_SPEAKER_MIC" interface="INT3_MI2S_TX"/>
         <device name="SND_DEVICE_IN_VOICE_HEADSET_MIC" interface="INT3_MI2S_TX"/>
@@ -232,7 +243,7 @@
         <device name="SND_DEVICE_IN_CAMCORDER_MIC" interface="INT3_MI2S_TX"/>
         <device name="SND_DEVICE_IN_VOICE_DMIC" interface="INT3_MI2S_TX"/>
         <device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC" interface="INT3_MI2S_TX"/>
-	<device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC_ECHO" interface="INT3_MI2S_TX"/>
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC_ECHO" interface="INT3_MI2S_TX"/>
         <device name="SND_DEVICE_IN_VOICE_SPEAKER_QMIC" interface="INT3_MI2S_TX"/>
         <device name="SND_DEVICE_IN_VOICE_TTY_FULL_HEADSET_MIC" interface="INT3_MI2S_TX"/>
         <device name="SND_DEVICE_IN_VOICE_TTY_VCO_HANDSET_MIC" interface="INT3_MI2S_TX"/>
