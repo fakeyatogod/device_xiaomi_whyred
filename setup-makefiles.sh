@@ -44,6 +44,10 @@ write_headers
 
 write_makefiles "$MY_DIR"/proprietary-files.txt true
 
+printf '\n' >> "$PRODUCTMK"
+
+write_makefiles "$MY_DIR"/proprietary-camera-files.txt true
+
 cat << EOF >> "$ANDROIDMK"
 
 EOF
