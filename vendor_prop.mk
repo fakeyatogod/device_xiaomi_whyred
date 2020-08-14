@@ -43,6 +43,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.safx.pbe.enabled=false \
     vendor.audio.parser.ip.buffer.size=262144 \
     vendor.audio.flac.sw.decoder.24bit=true \
+    persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac \
+    persist.bluetooth.a2dp_offload.cap=sbc-aptx-aptxhd-aac \
+    ro.vendor.bluetooth.wipower=false \
+    vendor.fm.a2dp.conc.disabled=true \
     vendor.audio.use.sw.alac.decoder=true \
     vendor.audio.use.sw.ape.decoder=true \
     vendor.audio.hw.aac.encoder=true \
@@ -60,6 +64,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #add dynamic feature flags here
 PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.feature.a2dp_offload.enable=false \
     vendor.audio.feature.afe_proxy.enable=true \
     vendor.audio.feature.anc_headset.enable=true \
     vendor.audio.feature.battery_listener.enable=false \
@@ -101,16 +106,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.wsa.enable=false \
     vendor.audio.feature.audiozoom.enable=false \
     vendor.audio.feature.snd_mon.enable=true
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.bluetooth.a2dp_offload.disabled=false \
-    ro.bluetooth.a2dp_offload.supported=true \
-    vendor.audio.feature.a2dp_offload.enable=true \
-    persist.vendor.bt.a2dp.aac_whitelist=false \
-    persist.vendor.qcom.bluetooth.enable.splita2dp=true \
-    persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxhd-aac-ldac \
-    ro.bluetooth.library_name=libbluetooth_qti.so \
-    vendor.bluetooth.soc=cherokee
 
 # Codec2 switch
 PRODUCT_PROPERTY_OVERRIDES += \
