@@ -93,6 +93,9 @@ ro.vendor.display.cabl=0
 ro.vendor.display.ad=1
 ro.vendor.display.ad.sdr_calib_data=/data/vendor/display/ad_calib.cfg
 ro.vendor.display.sensortype=2
+
+vendor.gralloc.disable_ahardware_buffer=1
+
 #
 # System props for telephony
 # System prop to turn on CdmaLTEPhone always
