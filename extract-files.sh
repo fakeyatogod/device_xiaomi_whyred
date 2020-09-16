@@ -79,7 +79,8 @@ patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$BLOB_ROOT"/v
 patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$BLOB_ROOT"/vendor/lib64/libmlipay.so
 patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "$BLOB_ROOT"/vendor/lib64/libmlipay@1.1.so
 
-patchelf --add-needed libcamera_sdm660_shim.so "$BLOB_ROOT"/vendor/lib/hw/camera.sdm660.so
+#patchelf --add-needed libcamera_sdm660_shim.so "$BLOB_ROOT"/vendor/lib/hw/camera.sdm660.so
+#patchelf --add-needed libdpmframework_shim.so "$BLOB_ROOT"/product/lib64/libdpmframework.so
 
 sed -i 's/libicuuc.so/libicuuq.so/g' "$BLOB_ROOT"/vendor/lib/libicuuq.so
 sed -i 's/libicuuc.so/libicuuq.so/g' "$BLOB_ROOT"/vendor/lib/libMiWatermark.so
