@@ -30,9 +30,6 @@ genfscon sysfs /devices/virtual/graphics/fb1                                    
 genfscon sysfs /devices/virtual/graphics/fb2                                                                                            u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/virtual/graphics/fb3                                                                                            u:object_r:sysfs_graphics:s0
 
-# RTC
-genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm660@0:qcom,pm660_rtc/rtc                         u:object_r:sysfs_rtc:s0
-
 # LED
 genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d000/leds/button-backlight      u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d000/leds/button-backlight1     u:object_r:sysfs_graphics:s0
