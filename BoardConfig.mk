@@ -246,6 +246,7 @@ WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/wlan0/operstate"
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+TARGET_HAS_BROKEN_WLAN_SET_INTERFACE := true
 
 # inherit from the proprietary version
 -include vendor/xiaomi/whyred/BoardConfigVendor.mk
