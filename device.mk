@@ -278,7 +278,7 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-impl-qti \
+    android.hardware.health@2.1-impl-whyred \
     android.hardware.health@2.1-service
 
 # HIDL
