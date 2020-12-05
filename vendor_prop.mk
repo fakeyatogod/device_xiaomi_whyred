@@ -55,8 +55,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.spkr_prot.tx.sampling_rate=48000 \
     vendor.audio.adm.buffering.ms=12 \
     persist.vendor.audio.hw.binder.size_kbyte=1024 \
-    vendor.fm.a2dp.conc.disabled=true \
-    persist.vendor.service.bdroid.sibs=false
+    vendor.fm.a2dp.conc.disabled=true
 
 #add dynamic feature flags here
 PRODUCT_PROPERTY_OVERRIDES += \
